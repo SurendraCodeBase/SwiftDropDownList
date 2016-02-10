@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DropDownListView: UIView {
+public class DropDownListView: UIView {
     
     var triangView:Annotation?
     var tableView:UITableView?
@@ -21,7 +21,7 @@ class DropDownListView: UIView {
         
     }
     
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         
         self.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.layer.borderWidth = 1.0
@@ -46,7 +46,7 @@ class DropDownListView: UIView {
         self.titleLabal?.lineBreakMode = .ByWordWrapping
         self.addSubview(self.titleLabal!)
     }
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
     
@@ -76,11 +76,11 @@ class DropDownListView: UIView {
 
 extension DropDownListView:UITableViewDelegate,UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.list!.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cellId = "cell"
         
@@ -95,7 +95,7 @@ extension DropDownListView:UITableViewDelegate,UITableViewDataSource {
         return cell!
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.titleLabal?.text = self.list![indexPath.row]
         self.isActive = false
         self.triangView!.transform = CGAffineTransformMakeRotation(CGFloat(M_PI))

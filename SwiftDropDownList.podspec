@@ -8,7 +8,7 @@ s.summary = "SwiftDropDownList lets a user select an item."
 s.requires_arc = true
 
 # 2
-s.version = "0.1.0"
+s.version = “0.1.1”
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -41,5 +41,5 @@ s.framework = "UIKit"
 s.source_files = "SwiftDropDownList/**/*.{swift}"
 
 # 9
-s.resources = "SwiftDropDownList/**/*.{png,jpeg,jpg,storyboard,xib}"
+# s.resources = "SwiftDropDownList/**/*.{png,jpeg,jpg,storyboard,xib}"
 end

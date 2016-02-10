@@ -9,17 +9,17 @@
 import Foundation
 import UIKit
 
-class Annotation : UIView {
+public class Annotation : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
     
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         
         let ctx : CGContextRef = UIGraphicsGetCurrentContext()!
         
