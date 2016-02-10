@@ -8,7 +8,7 @@ s.summary = "SwiftDropDownList lets a user select an item."
 s.requires_arc = true
 
 # 2
-s.version = "1.0.0"
+s.version = "0.1.0"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
